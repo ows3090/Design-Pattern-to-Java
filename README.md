@@ -21,3 +21,11 @@ In this order, I will introduce several design pattern methods.
 10. Template Method
 
 <br>
+
+### Builder Pattern
+
+- It is mainly used as a pattern for creating classes with many member variables.
+- It is a way to build a large one by setting the necessary information one by one.
+- ex) NotificationCompat, StringBuilder
+
+<br>
