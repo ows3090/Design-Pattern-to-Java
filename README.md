@@ -29,3 +29,20 @@ In this order, I will introduce several design pattern methods.
 - ex) NotificationCompat, StringBuilder
 
 <br>
+
+### Factory Pattern
+
+- This pattern is mainly used to reduce the degree of coupling between objects.
+- With the factory pattern, object creation is encapsulated, and instance of a class are determined by the subclass.
+- If the implementation is based on concrete classes, the possibility of modifying the code later is high and flexibility is significantly reduced.
+- ex) Fragment
+
+<br>
+
+
+
+
+
+
+
+
