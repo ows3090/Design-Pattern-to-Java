@@ -39,6 +39,16 @@ In this order, I will introduce several design pattern methods.
 
 <br>
 
+### Singleton Pattern
+
+- This pattern usually only creates an instance once and uses the same instance across the entire region.
+- It makes it easier for instances of different classes to share data.
+- However, if the singleton instance is called and used by multiple classes, the coupling is high.
+- In addition, synchronization processing is essential in a multithreaded environment.
+- ex) Database, registry
+
+<br>
+
 
 
 

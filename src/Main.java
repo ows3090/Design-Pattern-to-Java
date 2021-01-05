@@ -1,5 +1,26 @@
 import factory.*;
+import singleton.Singleton;
 
+
+public class Main {
+    public static void main(String[] args) {
+
+        Singleton singleton = Singleton.getInstance();
+        Singleton singleton1 = Singleton.getInstance();
+
+        if(singleton == singleton1){
+            System.out.println("같음");
+        }else{
+            System.out.println("다름");
+        }
+
+    }
+}
+
+
+/**
+ * Factory Pattern
+ *
 public class Main {
     public static void main(String[] args) {
 
@@ -18,6 +39,7 @@ public class Main {
 
     }
 }
+ **/
 
 
 /**
