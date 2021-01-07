@@ -1,7 +1,33 @@
+import Decorator.FullBorder;
+import Decorator.Scaffold;
+import Decorator.SideBorder;
+import Decorator.TextWidget;
 import adapter.GalaxyAdapter;
 import adapter.MyGalaxy;
 import adapter.MyIPhone;
 
+
+public class Main{
+    public static void main(String[] args) {
+
+        new Scaffold(
+                new FullBorder(
+                        new SideBorder(
+                                new FullBorder(
+                                        new SideBorder(
+                                                new TextWidget("hello world")
+                                        )
+                                )
+                        )
+                )
+        );
+    }
+}
+
+
+/**
+ * Adapter Pattern
+ *
 public class Main{
     public static void main(String[] args){
 
@@ -16,6 +42,7 @@ public class Main{
 
     }
 }
+ **/
 
 /**
  * Singleton Pattern

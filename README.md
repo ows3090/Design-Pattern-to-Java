@@ -55,6 +55,15 @@ In this order, I will introduce several design pattern methods.
 - Maintenance is facilitated with this pattern.
 - ex) ListView, RecyclerView 
 
+<br>
+
+### Decorator Pattern
+
+- This pattern is mainly used when the main class implements additional functionality without changes.
+- It is process of creating a large class through inheritance and composition of additional classes in a small class.
+- ex) Android UI, swift UI, flutter
+
+<br>
 
 
 
