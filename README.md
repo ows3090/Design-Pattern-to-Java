@@ -49,6 +49,16 @@ In this order, I will introduce several design pattern methods.
 
 <br>
 
+### Adapter Pattern
+
+- This is primarily used when converting one class interface to another.
+- Maintenance is facilitated with this pattern.
+- ex) ListView, RecyclerView 
+
+
+
+
+
 
 
 

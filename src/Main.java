@@ -1,7 +1,25 @@
-import factory.*;
-import singleton.Singleton;
+import adapter.GalaxyAdapter;
+import adapter.MyGalaxy;
+import adapter.MyIPhone;
 
+public class Main{
+    public static void main(String[] args){
 
+        MyIPhone iPhone = new MyIPhone();
+        iPhone.printIModel();
+        iPhone.printIVersion();
+
+        MyGalaxy gallery = new MyGalaxy();
+        GalaxyAdapter adapter = new GalaxyAdapter(gallery);
+        adapter.printIModel();
+        adapter.printIVersion();
+
+    }
+}
+
+/**
+ * Singleton Pattern
+ *
 public class Main {
     public static void main(String[] args) {
 
@@ -16,6 +34,7 @@ public class Main {
 
     }
 }
+ **/
 
 
 /**
