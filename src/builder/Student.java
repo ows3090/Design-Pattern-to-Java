@@ -41,7 +41,6 @@ public class Student {
             }
 
             student.sInfo = sb.toString();
-
             return student;
         }
     }

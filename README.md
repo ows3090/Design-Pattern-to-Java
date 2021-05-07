@@ -1,5 +1,5 @@
 
-## Java Design Pattern
+# Java Design Pattern
 
 I will introduce some java design patterns. 
 By learning this, you can effectively design and design components.
@@ -11,7 +11,7 @@ In this order, I will introduce several design pattern methods.
 
 1. [Builder](#Builder-Pattern) 
 2. [Factory](#Factory-Pattern) 
-3. [Singleton](#Sigleton-Pattern) 
+3. [Singleton](#Singleton-Pattern) 
 4. [Adapter](#Adapter-Pattern)
 5. [Decorator](#Decorator-Pattern)
 6. [command](#Command-Pattern)
@@ -28,6 +28,68 @@ In this order, I will introduce several design pattern methods.
 - It is a way to build a large one by setting the necessary information one by one.
 - ex) NotificationCompat, StringBuilder
 
+#### Example
+```
+public class Student {
+    private String sInfo;
+
+    @Override
+    public String toString() {
+        return sInfo;
+    }
+
+    public static class Builder{
+        private int id;
+        private String name;
+        private String[] lessons;
+
+        public Builder setID(int id){
+            this.id = id;
+            return this;
+        }
+
+        public Builder setName(String name){
+            this.name = name;
+            return this;
+        }
+
+        public Builder setLessons(String... lessons){
+            this.lessons = lessons;
+            return this;
+        }
+
+        public Student build(){
+            Student student = new Student();
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("학번 : ").append(id).append("\n");
+            sb.append("이름 : ").append(name).append("\n");
+            sb.append("수업 과목").append("\n");
+            
+            for(String lesson : lessons){
+                sb.append(" - ").append(lesson).append("\n");
+            }
+            
+            student.sInfo = sb.toString();
+            return student;
+        }
+    }
+}
+```
+#### Usage
+```
+public class Main {
+    public static void main(String[] args) {
+        Student student = new Student.Builder()
+                .setID(2014103251)
+                .setName("홍길동")
+                .setLessons("국어","수학","영어")
+                .build();
+
+        System.out.println(student);
+    }
+}
+```
 <br>
 
 ### Factory Pattern
