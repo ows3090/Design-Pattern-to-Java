@@ -29,7 +29,7 @@ In this order, I will introduce several design pattern methods.
 - ex) NotificationCompat, StringBuilder
 
 #### Example
-```
+```java
 public class Student {
     private String sInfo;
 
@@ -77,7 +77,7 @@ public class Student {
 }
 ```
 #### Usage
-```
+```java
 public class Main {
     public static void main(String[] args) {
         Student student = new Student.Builder()
