@@ -5,8 +5,18 @@ import Decorator.TextWidget;
 import adapter.GalaxyAdapter;
 import adapter.MyGalaxy;
 import adapter.MyIPhone;
+import command.DrawingApp;
 
 
+public class Main {
+    public static void main(String[] args) {
+        new DrawingApp("Command");
+    }
+}
+
+/**
+ * Decorator Pattern
+ *
 public class Main{
     public static void main(String[] args) {
 
@@ -23,12 +33,13 @@ public class Main{
         );
     }
 }
-
+**/
 
 /**
  * Adapter Pattern
  *
-public class Main{
+
+ public class Main{
     public static void main(String[] args){
 
         MyIPhone iPhone = new MyIPhone();

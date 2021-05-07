@@ -14,7 +14,7 @@ In this order, I will introduce several design pattern methods.
 3. Singleton 
 4. Adapter
 5. Decorator
-6. Command
+6. command
 7. Memento
 8. Observer
 9. Strategy
@@ -65,9 +65,12 @@ In this order, I will introduce several design pattern methods.
 
 <br>
 
+### Command Pattern
 
+- Using this pattern facilitates the use of command and makes it easier to manage command.
+- This example uses swing library.
 
-
+<br>
 
 
 
