@@ -9,7 +9,7 @@ public class English implements Subject{
 
     @Override
     public void describe() {
-        System.out.println(name+"를 수강합니다!!");
+        System.out.println(name);
     }
 
     public static class Factory{

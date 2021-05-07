@@ -82,16 +82,16 @@ public class Main {
     public static void main(String[] args) {
 
         Factory factory = new SubjectFactory();
-        Subject subject1 = factory.createFactory("프로그래밍");
-        Subject subject2 = factory.createFactory("영어");
+        Subject subject1 = factory.createFactory("Programming");
+        Subject subject2 = factory.createFactory("English");
 
         subject1.describe();
         subject2.describe();
 
-        English english = English.Factory.create("영어");
+        English english = English.Factory.create("English");
         english.describe();
 
-        Program program = Program.Factory.create("프로그래밍");
+        Program program = Program.Factory.create("Programming");
         program.describe();
 
     }
@@ -106,8 +106,8 @@ public class Main {
     public static void main(String[] args) {
         Student student = new Student.Builder()
                 .setID(2014103251)
-                .setName("홍길동")
-                .setLessons("국어","수학","영어")
+                .setName("Oh won seok")
+                .setLessons("Korean","Math","English")
                 .build();
 
         System.out.println(student);

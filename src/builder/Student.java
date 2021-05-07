@@ -32,9 +32,9 @@ public class Student {
             Student student = new Student();
 
             StringBuilder sb = new StringBuilder();
-            sb.append("학번 : ").append(id).append("\n");
-            sb.append("이름 : ").append(name).append("\n");
-            sb.append("수업 과목").append("\n");
+            sb.append("ID : ").append(id).append("\n");
+            sb.append("Name : ").append(name).append("\n");
+            sb.append("Lesson").append("\n");
 
             for(String lesson : lessons){
                 sb.append(" - ").append(lesson).append("\n");

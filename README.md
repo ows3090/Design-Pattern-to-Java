@@ -62,9 +62,9 @@ public class Student {
             Student student = new Student();
 
             StringBuilder sb = new StringBuilder();
-            sb.append("학번 : ").append(id).append("\n");
-            sb.append("이름 : ").append(name).append("\n");
-            sb.append("수업 과목").append("\n");
+            sb.append("ID : ").append(id).append("\n");
+            sb.append("Name : ").append(name).append("\n");
+            sb.append("Lesson").append("\n");
             
             for(String lesson : lessons){
                 sb.append(" - ").append(lesson).append("\n");
@@ -76,16 +76,16 @@ public class Student {
     }
 }
 ```
+
 #### Usage
 ```java
 public class Main {
     public static void main(String[] args) {
         Student student = new Student.Builder()
                 .setID(2014103251)
-                .setName("홍길동")
-                .setLessons("국어","수학","영어")
+                .setName("Oh won seok")
+                .setLessons("Korean","Math","English")
                 .build();
-
         System.out.println(student);
     }
 }
@@ -99,6 +99,48 @@ public class Main {
 - If the implementation is based on concrete classes, the possibility of modifying the code later is high and flexibility is significantly reduced.
 - ex) Fragment
 
+#### Example
+```java
+public class SubjectFactory implements Factory {
+    @Override
+    public Subject createFactory(String name) {
+        Subject subject = null;
+        switch (name){
+            case "English":
+                subject = new English(name);
+                break;
+            case "Programming":
+                subject = new Program(name);
+                break;
+        }
+        return subject;
+    }
+}
+```
+
+#### Usage
+```java
+public class Main {
+    public static void main(String[] args) {
+	
+	// Common
+        Factory factory = new SubjectFactory();
+        Subject subject1 = factory.createFactory("Programming");
+        Subject subject2 = factory.createFactory("English");
+
+        subject1.describe();
+        subject2.describe();
+	
+	// Android
+        English english = English.Factory.create("English");
+        english.describe();
+
+        Program program = Program.Factory.create("Programming");
+        program.describe();
+
+    }
+}
+```
 <br>
 
 ### Singleton Pattern
@@ -109,6 +151,23 @@ public class Main {
 - In addition, synchronization processing is essential in a multithreaded environment.
 - ex) Database, registry
 
+#### Example
+```java
+public class Singleton {
+
+    private static Singleton instance;
+    
+    private Singleton() {
+    }
+
+    public static Singleton getInstance(){
+        if(instance == null){
+            instance = new Singleton();
+        }
+        return instance;
+    }
+}
+```
 <br>
 
 ### Adapter Pattern
@@ -116,6 +175,46 @@ public class Main {
 - This is primarily used when converting one class interface to another.
 - Maintenance is facilitated with this pattern.
 - ex) ListView, RecyclerView 
+
+#### Example
+```java
+public class GalaxyAdapter implements IPhone {
+
+    private Galaxy galaxy;
+
+    public GalaxyAdapter(Galaxy galaxy) {
+        this.galaxy = galaxy;
+    }
+
+    @Override
+    public void printIModel() {
+        galaxy.showGModel();
+    }
+
+    @Override
+    public void printIVersion() {
+        galaxy.showGVersion();
+    }
+}
+```
+
+#### Usage
+```java
+class Main{
+    public static void main(String[] args){
+
+        MyIPhone iPhone = new MyIPhone();
+        iPhone.printIModel();
+        iPhone.printIVersion();
+
+        MyGalaxy gallery = new MyGalaxy();
+        GalaxyAdapter adapter = new GalaxyAdapter(gallery);
+        adapter.printIModel();
+        adapter.printIVersion();
+
+    }
+}
+```
 
 <br>
 
