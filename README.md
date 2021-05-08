@@ -14,11 +14,11 @@ In this order, I will introduce several design pattern methods.
 3. [Singleton](#Singleton-Pattern) 
 4. [Adapter](#Adapter-Pattern)
 5. [Decorator](#Decorator-Pattern)
-6. [command](#Command-Pattern)
+6. [Command](#Command-Pattern)
 7. [Memento](#Memento-Pattern)
 8. [Observer](#Observer-Pattern)
-9. [strategy](#Strategy-Pattern)
-10.[Template](#Template-Pattern)
+9. [SAtrategy](#Strategy-Pattern)
+10. [Template](#Template-Pattern)
 
 <br>
 
