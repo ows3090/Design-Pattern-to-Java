@@ -15,10 +15,10 @@ In this order, I will introduce several design pattern methods.
 4. [Adapter](#Adapter-Pattern)
 5. [Decorator](#Decorator-Pattern)
 6. [command](#Command-Pattern)
-7. Memento
-8. Observer
-9. Strategy
-10. Template Method
+7. [Memento](#Memento-Pattern)
+8. [Observer](#Observer-Pattern)
+9. [Strategy](#Strategy-Pattern)
+10.[Template](#Template-Pattern)
 
 <br>
 
@@ -233,7 +233,12 @@ class Main{
 
 <br>
 
+### Memento Pattern
 
+- Using this pattern, you can implement the ability to save a certain state.
+- By seperating UI and function, it is easy for maintenance and testing.
+
+<br>
 
 
 

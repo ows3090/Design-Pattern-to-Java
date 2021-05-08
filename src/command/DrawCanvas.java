@@ -12,6 +12,10 @@ public class DrawCanvas extends Canvas implements Drawable{
         this.history = history;
     }
 
+    public void setHistory(MacroCommand history) {
+        this.history = history;
+    }
+
     @Override
     public void paint(Graphics g) {
         history.execute();

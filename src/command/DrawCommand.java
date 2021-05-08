@@ -2,7 +2,7 @@ package command;
 
 import java.awt.*;
 
-public class DrawCommand implements Command{
+public class DrawCommand implements Command, Cloneable{
     private Drawable drawable;
     private Point point;
 
