@@ -18,6 +18,7 @@ In this order, I will introduce several design pattern methods.
 7. [Memento](#Memento-Pattern)
 8. [Observer](#Observer-Pattern)
 9. [strategy](#Strategy-Pattern)
+
 10.[Template](#Template-Pattern)
 
 <br>
