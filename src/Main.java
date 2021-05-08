@@ -11,7 +11,27 @@ import observer.GraphicObserver;
 import observer.Observer;
 import observer.RandomGenerator;
 import strategy.*;
+import template.Hero;
+import template.Monster;
+import template.Slime;
+import template.SuperHero;
 
+public class Main{
+    public static void main(String[] args) {
+        Hero hero = new Hero("용사");
+        Monster monster = new Slime('A');
+
+        SuperHero superHero = new SuperHero("슈퍼맨");
+        superHero.attack(monster);
+        superHero.setFlying(true);
+
+        hero.attack(monster);
+    }
+}
+
+/**
+ * Strategy Pattern
+ *
 public class Main{
     public static void main(String[] args) {
         Player player1 = new Player("player1",new RockStrategy());
@@ -25,6 +45,7 @@ public class Main{
 
     }
 }
+ **/
 
 /**
  * Observer Pattern

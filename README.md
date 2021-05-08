@@ -295,3 +295,9 @@ public class Main{
 
 <br>
 
+### Template pattern
+
+- This pattern makes new class that have common function for simillar classes.
+- If similar classes are written in multiple places, you need to fix them everywhere when error occuring.
+- But, Using this pattern is easier to fix.
+
