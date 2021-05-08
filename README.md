@@ -17,7 +17,7 @@ In this order, I will introduce several design pattern methods.
 6. [command](#Command-Pattern)
 7. [Memento](#Memento-Pattern)
 8. [Observer](#Observer-Pattern)
-9. [Strategy](#Strategy-Pattern)
+9. [strategy](#Strategy-Pattern)
 10.[Template](#Template-Pattern)
 
 <br>
@@ -288,12 +288,10 @@ public class Main{
 
 <br>
 
- 
+### Strategy Pattern
 
+- This pattern that uses polymorphism, allowing you to use different strategies with same method.
+- Even if a new strategy is added, there is no need to change the existing code.
 
-
-
-
-
-
+<br>
 
