@@ -240,6 +240,59 @@ class Main{
 
 <br>
 
+### Observer Pattern
+
+- A pattern that is common in Android and it defines behavior by observing a specific object.
+- Becase of using interface or abstract class, It is not necessary to know what you are observing.
+- ex) OnClickListener, LiveData, Rxjava
+
+#### Example
+```java
+public interface Observer {
+    void update(int number);
+}
+
+public class DigitObserver implements Observer {
+
+    @Override
+    public void update(int number) {
+        System.out.println("Number : "+number);
+    }
+}
+```
+
+#### Usage
+```java
+public class Main{
+    public static void main(String[] args) {
+        RandomGenerator randomGenerator = new RandomGenerator();
+
+        Observer observer1 = new DigitObserver();
+        Observer observer2 = new GraphicObserver();
+        Observer observer3 = number -> {
+            for(int i=0;i<number;i++){
+                System.out.print("=");
+            }
+            System.out.println();
+        };
+
+        randomGenerator.addObserver(observer1);
+        randomGenerator.addObserver(observer2);
+        randomGenerator.addObserver(observer3);
+
+        randomGenerator.execute();
+        randomGenerator.execute();
+    }
+}
+```
+
+<br>
+
+ 
+
+
+
+
 
 
 
